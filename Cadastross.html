@@ -1,0 +1,108 @@
+<!doctype HTML> 
+<html lang="pt-br">
+	<head>
+		<title>Consultorio clinico</title>
+		<meta charset="UTF-8">
+
+		<style>
+			body{
+
+			font-family: Arial, Helvetica, sans-serif;
+			background-image: linear-gradient(to right, red, black);
+			}
+			#data_nascimento{
+			
+			border: none;
+			padding: 8px;
+			border-radius: 10px;
+			outline: none;
+			font-size: 15px;
+			}
+
+			#data_agendamento{
+			
+			border: none;
+			padding: 8px;
+			border-radius: 10px;
+			outline: none;
+			font-size: 15px;
+			}
+			#nome{
+
+			border: none;
+			padding: 8px;
+			border-radius: 10px;
+			outline: none;
+			font-size: 15px;	
+			}
+
+			#civil{
+			border: none;
+			padding: 8px;
+			border-radius: 10px;
+			outline: none;
+			font-size: 15px;	
+			}
+			#Carteirinha{
+			border: none;
+			padding: 8px;
+			border-radius: 10px;
+			outline: none;
+			font-size: 15px;	
+			}
+
+		</style>
+	</head>
+	<body>
+		<form 	action="gravarDados.php"
+				method="post" 
+				enctype="multipart/form-data">
+
+			Nome:
+			<input type="text" name="nome" maxlength="60" placeholder="Nome do Paciente" required size="60" id="nome"> <br> <br>
+            Email:
+			<input type="email" name="email" maxlength="40" placeholder="exemp@gmail.com" required size="50"id="nome"> <br> <br>
+            Telefone:
+			<input type="number" name="telefone" maxlength="15" placeholder="(11)2345-6789" required size="15"id="nome"> <br> <br>
+
+			Estado Civil:
+			<select name="estado civil" id="civil">
+				<option value="">Escolha</option>
+				<option value="S">Solteiro(a)</option>
+				<option value="C">Casado(a)</option>
+				<option value="D">Divorciado(a)</option>
+				<option value="V">Viuvo(a)</option>
+			</select> <br> <br>
+
+            Data de Nascimento: 
+			<input type="date" name="nascimento" value="dd/mm/aaaa" min="1930-01-01" max="2022-10-31" id="data_nascimento"> <br> <br>
+
+			Sexo:
+				<input type="radio" name="sexo" value="M"> Masculino
+				<input type="radio" name="sexo" value="F" checked> Feminino
+		    <br> <br> <hr>
+			
+			<br> Tem alguma doença crônica?
+			<input type="checkbox" value="S"> Sim 
+			<input type="checkbox" value="N"> Não <br> <br>
+
+			Data do Agendamento: 
+			<input type="date" name="dataAgendamento" value="2022-10-10" min="2022-08-01" max="2023-06-01" id="data_agendamento" id="nome"> <br> <br>
+
+			Horario do Agendamento: 
+			<input type="time" name="hrAgendamento" min="9" max="21" id="nome"> <br> <br> <hr>
+ 
+			<br> Numero da Carteirinha:
+			<input type="number" id="Carteirinha" name="Carteirinha" maxlength="15" placeholder="1234567" required size="15" > <br> <br>
+
+			Foto do RG: <input type="file" name="foto" id="nome" > <br> <br>
+            Foto da Carteirinha: <input type="file" name="foto"id="nome"> <br> <br>
+
+			Descrição da situação médica atual: <br> <br>
+			<textarea name="situacaomedica" rows="5" cols="80" id="nome"> </textarea>  <br> <br> <hr>
+            
+			<input type="submit" value="Marcar Consulta" id="nome">
+			<input type="reset" value="Limpar Campos" id="nome">
+		</form>
+	</body>
+</html>
